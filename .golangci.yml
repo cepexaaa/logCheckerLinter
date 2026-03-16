@@ -1,0 +1,34 @@
+version: "2"
+linters:
+  enable:
+    - loglint
+  disable:
+    - govet
+  settings:
+    custom:
+      loglint:
+        path: ./loglint.so
+        settings:
+          check-english: true
+          check-lowercase: true
+          check-no-specials: true
+          check-sensitive: true
+          sensitive-words: password,token,secret,key,api_key
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$

@@ -1,0 +1,8 @@
+{
+    "check_lowercase": true,
+    "check_english": true,
+    "check_no_specials": true,
+    "check_sensitive": true,
+    "sensitive_patterns": ["password", "token", "secret"],
+    "auto_fix": true
+}
